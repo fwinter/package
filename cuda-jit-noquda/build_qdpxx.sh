@@ -21,7 +21,7 @@ cmake ${SRCROOT}/qdp-jit \
        -DQDP_ENABLE_LLVM13=ON
 
 
-make -j $(nproc)
+make -j 32
 make install
 
 popd

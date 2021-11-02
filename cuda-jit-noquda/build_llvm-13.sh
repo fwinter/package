@@ -30,7 +30,7 @@ cmake ${SRCROOT}/llvm-13.0.0.src \
 
 
 
-make -j $(nproc)
+make -j 32
 make install
 
 popd

@@ -15,7 +15,7 @@ cmake ${SRCROOT}/chroma \
       -DChroma_ENABLE_JIT_CLOVER=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/chroma
 
-make -j $(nproc)
+make -j 32
 make install
 
 
