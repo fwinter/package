@@ -19,14 +19,13 @@ then
     PKG_PROP_OPT="ON"
 fi
 
-
+#       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
 
 cmake ${SRCROOT}/qdp-jit \
        -DQDP_PRECISION=double \
        -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
        -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
-       -DQDP_ENABLE_BACKEND=CUDA \
+       -DQDP_ENABLE_BACKEND=ROCM \
        -DQDP_BUILD_EXAMPLES=OFF \
        -DQDP_ENABLE_LLVM13=ON \
        -DQDP_PROP_OPT=$PKG_PROP_OPT
