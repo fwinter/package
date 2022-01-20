@@ -5,9 +5,9 @@ module load gcc/10.2.0
 module load mpi/openmpi-x86_64
 
 #module load mpi/mvapich2-x86_64
-module load rocm/4.3.0
+#module load rocm/4.3.0
+module load rocm/4.5.2
 module load cmake/3.21.1
-#
 
 
 
