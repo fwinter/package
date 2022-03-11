@@ -9,8 +9,7 @@ fi
 mkdir  ./build_qdpxx
 cd ./build_qdpxx
 
-#       -DQDP_ENABLE_COMM_SPLIT_DEVICEINIT=ON
-
+#
 if [ -z $PKG_PROP_OPT ]
 then
     PKG_PROP_OPT="ON"
@@ -22,6 +21,7 @@ fi
 
 
 cmake ${SRCROOT}/qdp-jit \
+       -DQDP_ENABLE_COMM_SPLIT_DEVICEINIT=ON \
        -DQDP_PRECISION=double \
        -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
        -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
