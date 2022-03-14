@@ -1,8 +1,8 @@
 
 module unload xl
-module load gcc/10.2.0
+module load gcc/11.1.0
 module load cmake
-module load cuda
+module load cuda/11.4.2
 
 export CXX=mpicxx
 export CC=mpicc
