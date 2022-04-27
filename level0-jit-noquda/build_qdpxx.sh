@@ -3,7 +3,8 @@ pushd ${BUILDROOT}
 
 if [ -d ./build_qdpxx ];
 then
-  rm -rf ./build_qdpxx
+    echo "Removing previous QDP"
+    rm -rf ./build_qdpxx
 fi
 
 mkdir  ./build_qdpxx
@@ -20,23 +21,28 @@ then
 fi
 
 #       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
+#       -DQDP_LAYOUT="cb2" \
+#       -DQDP_LAYOUT="vnode" \
+#      -DCMAKE_BUILD_TYPE=Debug \
+
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${INSTALLROOT}/translator/lib/pkgconfig:${INSTALLROOT}/level-zero/lib64/pkgconfig"
 
 cmake ${SRCROOT}/qdp-jit \
-       -DQDP_PRECISION=single \
-       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
-       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
-       -DQDP_ENABLE_BACKEND=L0 \
-       -DQDP_LAYOUT="cb2" \
-       -DQDP_ENABLE_CODEGEN_VECTOR=OFF \
-       -DQDP_BUILD_EXAMPLES=ON \
-       -DQDP_ENABLE_LLVM14=OFF \
-       -DQDP_PROP_OPT=$PKG_PROP_OPT
+      -DQDP_ENABLE_DEEP_LOG=OFF \
+      -DQDP_PRECISION=single \
+      -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
+      -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
+      -DQDP_ENABLE_BACKEND=L0 \
+      -DQDP_LAYOUT="cb2" \
+      -DQDP_ENABLE_CODEGEN_VECTOR=OFF \
+      -DQDP_BUILD_EXAMPLES=ON \
+      -DQDP_ENABLE_LLVM14=OFF \
+      -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
-make -j 32
+make -j 16
 make install
 
 popd
