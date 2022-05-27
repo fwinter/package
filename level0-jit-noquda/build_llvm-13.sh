@@ -19,6 +19,7 @@ pushd ./build_llvm_13
 
 
 cmake ${SRCROOT}/llvm-13.0.1.src \
+      -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_CXX_COMPILER="g++" \
       -DCMAKE_C_COMPILER="gcc" \
       -DLLVM_ENABLE_TERMINFO="OFF" \

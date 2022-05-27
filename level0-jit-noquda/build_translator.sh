@@ -12,6 +12,7 @@ cd ./build_translator
 
 
 cmake ${SRCROOT}/SPIRV-LLVM-Translator \
+      -DCMAKE_BUILD_TYPE=Debug \
       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/translator \
       -DLLVM_SPIRV_BUILD_EXTERNAL=YES

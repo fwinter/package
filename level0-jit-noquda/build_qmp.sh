@@ -19,6 +19,7 @@ cd ./build_qmp
 #	-DCMAKE_EXE_LINKER_FLAGS="${MPI_LDFLAGS}"
 	
 cmake ${SRCROOT}/qmp \
+      -DCMAKE_BUILD_TYPE=Debug \
       -DQMP_MPI=OFF \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qmp
 
