@@ -19,11 +19,10 @@ pushd ./build_llvm_13
 
 
 cmake ${SRCROOT}/llvm-13.0.1.src \
-      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_CXX_COMPILER="g++" \
       -DCMAKE_C_COMPILER="gcc" \
       -DLLVM_ENABLE_TERMINFO="OFF" \
-      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/llvm-13  \
       -DLLVM_TARGETS_TO_BUILD="X86" \
       -DLLVM_ENABLE_ZLIB="OFF" \

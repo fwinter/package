@@ -20,7 +20,7 @@ cd ./build_qmp
 	
 cmake ${SRCROOT}/qmp \
       -DCMAKE_BUILD_TYPE=Debug \
-      -DQMP_MPI=OFF \
+      -DQMP_MPI=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qmp
 
 

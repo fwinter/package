@@ -19,7 +19,7 @@ cd ./build_chroma
 cmake ${SRCROOT}/chroma \
       -DLevelZero_INCLUDE_DIR=${L0}/include \
       -DLevelZero_LIBRARY=${L0}/lib64 \
-      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_BUILD_TYPE=Release \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
       -DChroma_ENABLE_JIT_CLOVER=ON \

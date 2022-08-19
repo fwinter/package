@@ -35,7 +35,7 @@ echo ${L0}
 cmake ${SRCROOT}/qdp-jit \
       -DLevelZero_INCLUDE_DIR=${L0}/include \
       -DLevelZero_LIBRARY=${L0}/lib64 \
-      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_BUILD_TYPE=Release \
       -DQDP_ENABLE_DEEP_LOG=OFF \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
