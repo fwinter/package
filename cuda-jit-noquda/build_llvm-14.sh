@@ -18,7 +18,8 @@ pushd ./build_llvm_14
 #      -DLLVM_ENABLE_RTTI="ON"
 
 
-cmake ${SRCROOT}/llvm-project-14.0.6.src \
+cmake ${SRCROOT}/llvm-project-14.0.6.src/llvm \
+      -DLLVM_ENABLE_PROJECTS="llvm" \
       -DCMAKE_CXX_COMPILER="g++" \
       -DCMAKE_C_COMPILER="gcc" \
       -DLLVM_ENABLE_TERMINFO="OFF" \
@@ -30,7 +31,7 @@ cmake ${SRCROOT}/llvm-project-14.0.6.src \
 
 
 
-make -j 32
+make -j 8
 make install
 
 popd
