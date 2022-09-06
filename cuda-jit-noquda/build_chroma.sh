@@ -11,11 +11,11 @@ cd ./build_chroma
 cmake ${SRCROOT}/chroma \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-14/lib/cmake/llvm \
       -DChroma_ENABLE_JIT_CLOVER=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/chroma
 
-make -j 32
+make -j 4
 make install
 
 

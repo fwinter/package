@@ -12,6 +12,7 @@ cd ./build_level-zero
 
 
 cmake ${SRCROOT}/level-zero \
+      -DCMAKE_BUILD_TYPE=Debug \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/level-zero
 
 

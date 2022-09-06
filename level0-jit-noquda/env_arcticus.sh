@@ -3,13 +3,16 @@ module use /soft/restricted/CNDA/modulefiles
 
 module load oneapi
 module load cmake
+module load tools/whichlib
+
+#module switch -f --no-auto intel_compute_runtime intel_compute_runtime/release/agama-prerelease-438
 
 
-export CXX=g++
-export CC=gcc
+#export CXX=g++
+#export CC=gcc
 
-#export CXX=mpicxx
-#export CC=mpicc
+export CXX=mpicxx
+export CC=mpicc
 
 PKG_PROP_OPT=ON
 
