@@ -20,6 +20,7 @@ cd ./build_qmp
 	
 cmake ${SRCROOT}/qmp \
       -DQMP_MPI=ON \
+      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qmp
 
 
