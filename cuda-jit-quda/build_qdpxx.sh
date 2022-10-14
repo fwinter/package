@@ -21,18 +21,19 @@ fi
 
 
 cmake ${SRCROOT}/qdp-jit \
-       -DQDP_ENABLE_COMM_SPLIT_DEVICEINIT=ON \
-       -DQDP_PRECISION=double \
-       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
-       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-       -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
-       -DQDP_ENABLE_BACKEND=CUDA \
-       -DQDP_BUILD_EXAMPLES=OFF \
-       -DQDP_ENABLE_LLVM14=OFF \
-       -DQDP_PROP_OPT=$PKG_PROP_OPT
+      -DCMAKE_BUILD_TYPE=Release \
+      -DQDP_ENABLE_COMM_SPLIT_DEVICEINIT=ON \
+      -DQDP_PRECISION=double \
+      -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
+      -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-14/lib/cmake/llvm \
+      -DQDP_ENABLE_BACKEND=CUDA \
+      -DQDP_BUILD_EXAMPLES=ON \
+      -DQDP_ENABLE_LLVM14=ON \
+      -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
-make -j 32
+make -j 8
 make install
 
 popd

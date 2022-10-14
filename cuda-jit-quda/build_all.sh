@@ -1,7 +1,8 @@
 mkdir -p build
 mkdir -p install
 
-./build_llvm-13.sh
+./build_llvm-14.sh
 ./build_qmp.sh
 ./build_qdpxx.sh
-#./build_chroma.sh
+./build_quda.sh
+./build_chroma.sh

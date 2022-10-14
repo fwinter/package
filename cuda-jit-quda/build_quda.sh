@@ -18,9 +18,11 @@ fi
 #      -DQUDA_DYNAMIC_CLOVER=OFF \
 #      -DQUDA_MAGMA=OFF        \
 
+#      -DCUDAToolkit_ROOT_DIR=$CUDA_TOOLKIT_ROOT_DIR \
 
 cmake ${SRCROOT}/quda \
       -G "Unix Makefiles" \
+      -DQUDA_GPU_ARCH="sm_75" \
       -DQUDA_TARGET_TYPE="CUDA" \
       -DQUDA_DIRAC_CLOVER=ON \
       -DQUDA_DIRAC_CLOVER_HASENBUSCH=ON \
@@ -36,8 +38,7 @@ cmake ${SRCROOT}/quda \
       -DQUDA_GAUGE_TOOLS=OFF \
       -DQUDA_QDPJIT=ON \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
-      -DCUDAToolkit_ROOT_DIR=$CUDA_TOOLKIT_ROOT_DIR \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-14/lib/cmake/llvm \
       -DQUDA_INTERFACE_QDPJIT=ON \
       -DQUDA_INTERFACE_MILC=OFF \
       -DQUDA_INTERFACE_CPS=OFF \
@@ -63,7 +64,7 @@ cmake ${SRCROOT}/quda \
       -DQUDA_HETEROGENEOUS_ATOMIC=OFF
 
 
-make -j 32
+make -j 4
 make install
 
 popd
