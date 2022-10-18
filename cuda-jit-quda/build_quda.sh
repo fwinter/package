@@ -22,7 +22,7 @@ fi
 
 cmake ${SRCROOT}/quda \
       -G "Unix Makefiles" \
-      -DQUDA_GPU_ARCH="sm_75" \
+      -DQUDA_GPU_ARCH="sm_80" \
       -DQUDA_TARGET_TYPE="CUDA" \
       -DQUDA_DIRAC_CLOVER=ON \
       -DQUDA_DIRAC_CLOVER_HASENBUSCH=ON \

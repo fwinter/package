@@ -1,1 +1,1 @@
-env_generic.sh
+env_polaris.sh
