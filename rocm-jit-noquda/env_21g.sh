@@ -6,9 +6,10 @@ module load mpi/openmpi-x86_64
 
 #module load mpi/mvapich2-x86_64
 #module load rocm/4.3.0
-module load rocm/4.5.2
-module load cmake/3.21.1
-
+#module load rocm/4.5.2
+module load rocm/5.1.3
+#module load cmake/3.21.1
+module load cmake/3.23.2
 
 
 export CXX=mpicxx

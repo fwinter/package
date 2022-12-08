@@ -27,7 +27,8 @@ cmake ${SRCROOT}/qdp-jit \
        -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
        -DQDP_ENABLE_BACKEND=ROCM \
        -DQDP_BUILD_EXAMPLES=OFF \
-       -DQDP_ENABLE_LLVM13=ON \
+       -DQDP_ROCM5FIX=ON \
+       -DQDP_ENABLE_LLVM14=ON \
        -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
