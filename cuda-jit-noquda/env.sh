@@ -1,1 +1,1 @@
-env_summit.sh
+env_generic.sh
