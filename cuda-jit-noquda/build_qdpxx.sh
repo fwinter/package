@@ -27,14 +27,15 @@ cmake ${SRCROOT}/qdp-jit \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-15/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-16/lib/cmake/llvm \
       -DQDP_ENABLE_BACKEND=CUDA \
       -DQDP_BUILD_EXAMPLES=ON \
-      -DQDP_ENABLE_LLVM15=ON \
+      -DQDP_ENABLE_LLVM16=ON \
       -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
 make -j 8
 make install
+
 
 popd
