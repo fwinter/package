@@ -41,13 +41,14 @@ cmake ${SRCROOT}/qdp-jit \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-13/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-16/lib/cmake/llvm \
       -DQDP_ENABLE_BACKEND=L0 \
       -DQDP_LAYOUT="cb2" \
       -DQDP_ENABLE_CODEGEN_VECTOR=OFF \
       -DQDP_BUILD_EXAMPLES=ON \
-      -DQDP_ENABLE_LLVM14=OFF \
+      -DQDP_ENABLE_LLVM16=ON \
       -DQDP_PROP_OPT=$PKG_PROP_OPT
+
 
 
 make -j 8
