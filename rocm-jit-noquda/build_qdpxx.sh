@@ -24,13 +24,15 @@ cmake ${SRCROOT}/qdp-jit \
       -DCMAKE_BUILD_TYPE=Debug \
       -DQDP_PRECISION=double \
       -DQDP_ROCM5FIX=OFF \
+      -DQDP_ROCM553FIX=OFF \
       -DQDP_ROCM_PRE=OFF \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLD_DIR=${ROCM_PATH}/llvm/lib/cmake/lld \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
+      -DLLD_DIR=${INSTALLROOT}/llvm-17/lib/cmake/lld \
       -DQDP_ENABLE_BACKEND=ROCM \
       -DQDP_BUILD_EXAMPLES=ON \
-      -DQDP_ENABLE_LLVM15=ON \
+      -DQDP_ENABLE_LLVM17=ON \
       -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
