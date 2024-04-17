@@ -21,7 +21,7 @@ fi
 
 
 cmake ${SRCROOT}/qdp-jit \
-      -DCMAKE_BUILD_TYPE=Debug \
+      -DCMAKE_BUILD_TYPE=Release \
       -DQDP_PRECISION=double \
       -DQDP_ROCM5FIX=OFF \
       -DQDP_ROCM553FIX=OFF \

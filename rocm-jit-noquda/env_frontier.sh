@@ -11,11 +11,11 @@
 #module load rocm/5.3.0
 module load zstd
 #module load googletest
-#module load rocm/5.4.3     # OK
-#module load rocm/5.5.1    # OK better
-#module load rocm/5.6.0     # OK segfault beginnig in set target machine
-#module load rocm/5.7.1    # OK segfault beginnig
-module load rocm/6.0.0    # OK segfault beginnig
+#module load rocm/5.4.3
+#module load rocm/5.5.1
+#module load rocm/5.6.0
+#module load rocm/5.7.1
+module load rocm/6.0.0 
 module load PrgEnv-gnu
 #module load cmake/3.21.1
 
