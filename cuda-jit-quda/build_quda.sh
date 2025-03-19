@@ -22,7 +22,8 @@ fi
 
 cmake ${SRCROOT}/quda \
       -G "Unix Makefiles" \
-      -DQUDA_GPU_ARCH="sm_80" \
+      -DCMAKE_BUILD_TYPE="DEVEL" \
+      -DQUDA_GPU_ARCH="sm_89" \
       -DQUDA_TARGET_TYPE="CUDA" \
       -DQUDA_DIRAC_CLOVER=ON \
       -DQUDA_DIRAC_CLOVER_HASENBUSCH=ON \
@@ -38,7 +39,7 @@ cmake ${SRCROOT}/quda \
       -DQUDA_GAUGE_TOOLS=OFF \
       -DQUDA_QDPJIT=ON \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-14/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
       -DQUDA_INTERFACE_QDPJIT=ON \
       -DQUDA_INTERFACE_MILC=OFF \
       -DQUDA_INTERFACE_CPS=OFF \
@@ -52,7 +53,7 @@ cmake ${SRCROOT}/quda \
       -DQUDA_MAX_MULTI_BLAS_N=9 \
       -DQUDA_DOWNLOAD_EIGEN=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/quda \
-      -DCMAKE_BUILD_TYPE="DEVEL" \
+      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_CXX_COMPILER=${CXX}\
       -DCMAKE_CXX_STANDARD=17 \
       -DCMAKE_CXX_EXTENSIONS=OFF \

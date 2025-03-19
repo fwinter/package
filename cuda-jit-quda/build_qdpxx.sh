@@ -26,10 +26,10 @@ cmake ${SRCROOT}/qdp-jit \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-14/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
       -DQDP_ENABLE_BACKEND=CUDA \
       -DQDP_BUILD_EXAMPLES=ON \
-      -DQDP_ENABLE_LLVM14=ON \
+      -DQDP_ENABLE_LLVM17=ON \
       -DQDP_PROP_OPT=$PKG_PROP_OPT
 
 
