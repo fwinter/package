@@ -12,7 +12,7 @@ cmake ${SRCROOT}/chroma \
       -DCMAKE_BUILD_TYPE=Release \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-16/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
       -DChroma_ENABLE_JIT_CLOVER=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/chroma
 
