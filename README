@@ -1,0 +1,59 @@
+# Chroma Build Package for GPU JIT Architectures
+
+This repository provides automated build scripts to simplify compiling **Chroma** on top of **qdp-jit**. It supports building for AMD (ROCm), NVIDIA (CUDA), and Intel (Level Zero) GPU architectures, automatically handling Chroma and all necessary prerequisites.
+
+## Prerequisites
+
+Before beginning the build process, ensure that you have loaded the appropriate software modules for your cluster or environment (e.g., specific GPU drivers, CMake, and your MPI stack). 
+
+
+## Quick Start Build Guide
+
+Choose the directory corresponding to your target GPU architecture:
+* AMD: `rocm-jit-noquda/`
+* NVIDIA: `cuda/`
+* Intel: `level0-jit-noquda/`
+
+Follow the three steps below to download, configure, and build.
+
+
+1. Download the Source Code
+---------------------------
+
+From the root of the repository, run the download script specific to your hardware to fetch Chroma and its dependencies:
+
+# For AMD GPUs
+./download_sources_rocm.sh
+
+# For NVIDIA GPUs
+./download_sources_cuda.sh
+
+# For Intel GPUs
+./download_sources_intel.sh
+
+
+
+2. Configure the Environment
+----------------------------
+
+Change to the appropriate architecture directory and modify the environment configuration script to match your system.
+
+# Navigate to your target architecture directory (e.g., CUDA)
+cd cuda/
+
+Open env.sh in your preferred text editor. Verify and update the following variables to ensure they point to your MPI compiler wrappers and correct installation paths:
+
+export CXX=mpicxx
+export CC=mpicc
+
+Make sure any other cluster-specific paths or modules are also correctly exported here.
+
+
+
+3. Run the Build Script
+-----------------------
+
+Once env.sh is configured, initiate the automated build process:
+
+./build_all.sh
+
