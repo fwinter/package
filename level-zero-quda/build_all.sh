@@ -1,0 +1,11 @@
+mkdir -p build
+mkdir -p install
+
+./build_llvm-16.sh
+###./build_level-zero.sh  - don't need, use system installation
+./build_translator.sh
+
+./build_qmp.sh
+./build_qdpxx.sh
+./build_quda.sh
+./build_chroma.sh
