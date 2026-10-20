@@ -19,7 +19,6 @@ cmake ${SRCROOT}/llvm-project-22.1.0.src/llvm \
       -DLLVM_ENABLE_PROJECTS="llvm" \
       -DCMAKE_CXX_COMPILER="g++" \
       -DCMAKE_C_COMPILER="gcc" \
-      -DLLVM_ENABLE_TERMINFO="OFF" \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/llvm-22  \
       -DLLVM_TARGETS_TO_BUILD="AMDGPU;X86" \
