@@ -9,7 +9,6 @@ export CRAY_ACCEL_TARGET=nvidia80
 export CXX=CC
 export CC=cc
 
-PKG_PROP_OPT=OFF
 
 export TOPDIR_HIP=`pwd`
 export SRCROOT=${TOPDIR_HIP}/../src

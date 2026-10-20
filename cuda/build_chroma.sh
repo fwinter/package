@@ -6,17 +6,20 @@ then
   rm -rf ./build_chroma
 fi
 
+#      -DLLVM_DIR=/home/fwinter/toolchain/install/llvm-17.0.6-nvptx-x86-release/lib/cmake/llvm \
+
+
 mkdir  ./build_chroma
 cd ./build_chroma
-cmake ${SRCROOT}/chroma \
+cmake ${SRCROOT}/chroma.devel \
       -DCMAKE_BUILD_TYPE=Release \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-22/lib/cmake/llvm \
       -DChroma_ENABLE_JIT_CLOVER=ON \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/chroma
 
-make -j 8
+make -j 7
 make install
 
 

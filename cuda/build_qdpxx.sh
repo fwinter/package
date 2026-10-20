@@ -9,29 +9,16 @@ fi
 mkdir  ./build_qdpxx
 cd ./build_qdpxx
 
-#       -DQDP_ENABLE_COMM_SPLIT_DEVICEINIT=ON
-
-if [ -z $PKG_PROP_OPT ]
-then
-    PKG_PROP_OPT="ON"
-elif [ $PKG_PROP_OPT != "OFF" ]
-then
-    PKG_PROP_OPT="ON"
-fi
-
-
 
 cmake ${SRCROOT}/qdp-jit \
-      -DQDP_ENABLE_MANAGED_MEMORY=OFF \
       -DCMAKE_BUILD_TYPE=Release \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-17/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-22/lib/cmake/llvm \
       -DQDP_ENABLE_BACKEND=CUDA \
       -DQDP_BUILD_EXAMPLES=ON \
-      -DQDP_ENABLE_LLVM17=ON \
-      -DQDP_PROP_OPT=$PKG_PROP_OPT
+      -DQDP_ENABLE_LLVM22=ON
 
 
 make -j 8

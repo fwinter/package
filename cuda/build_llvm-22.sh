@@ -15,8 +15,6 @@ mkdir  ./build_llvm_22
 pushd ./build_llvm_22
 
 
-#      -DLLVM_ENABLE_RTTI="ON"
-
 
 cmake ${SRCROOT}/llvm-project-22.1.0.src/llvm \
       -DLLVM_ENABLE_PROJECTS="llvm" \
