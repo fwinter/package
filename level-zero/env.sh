@@ -1,1 +1,1 @@
-env_sunspot.sh
+env_aurora.sh
