@@ -13,13 +13,14 @@ cd ./build_qdpxx
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:${INSTALLROOT}/translator/lib/pkgconfig"
 
-L0=$(whichlib libze_loader.so |& sed "s+lib64.*++" | head -n 1)
-echo ${L0}
+L0_INC=$(pkg-config --variable=includedir level-zero)
+L0_LIB=$(pkg-config --variable=libdir level-zero)
+echo "Level Zero: include=${L0_INC} lib=${L0_LIB}"
 
 
 cmake ${SRCROOT}/qdp-jit \
-      -DLevelZero_INCLUDE_DIR=${L0}/include \
-      -DLevelZero_LIBRARY=${L0}/lib64 \
+      -DCMAKE_INCLUDE_PATH=${L0_INC} \
+      -DCMAKE_LIBRARY_PATH=${L0_LIB} \
       -DCMAKE_BUILD_TYPE=Release \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
