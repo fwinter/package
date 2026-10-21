@@ -24,7 +24,7 @@ cmake ${SRCROOT}/qdp-jit \
       -DQDP_PRECISION=double \
       -DCMAKE_INSTALL_PREFIX=${INSTALLROOT}/qdpxx \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
-      -DLLVM_DIR=${INSTALLROOT}/llvm-16/lib/cmake/llvm \
+      -DLLVM_DIR=${INSTALLROOT}/llvm-22/lib/cmake/llvm \
       -DQDP_ENABLE_BACKEND=L0 \
       -DQDP_BUILD_EXAMPLES=ON \
       -DQDP_ENABLE_LLVM22=ON
