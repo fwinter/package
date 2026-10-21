@@ -6,12 +6,10 @@ then
   rm -rf ./build_chroma
 fi
 
-#      -DLLVM_DIR=/home/fwinter/toolchain/install/llvm-17.0.6-nvptx-x86-release/lib/cmake/llvm \
-
 
 mkdir  ./build_chroma
 cd ./build_chroma
-cmake ${SRCROOT}/chroma.devel \
+cmake ${SRCROOT}/chroma \
       -DCMAKE_BUILD_TYPE=Release \
       -DQDPXX_DIR=${INSTALLROOT}/qdpxx/lib/cmake/QDPXX \
       -DQMP_DIR=${INSTALLROOT}/qmp/lib/cmake/QMP \
